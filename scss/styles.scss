@@ -1,0 +1,50 @@
+@mixin displayFlex($alignItems: center, $justifyContent: space-between, $flexDirection: row) {
+    display: flex;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    flex-direction: $flexDirection;
+}
+
+body {
+    min-width: 340px;
+}
+
+body,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    user-select: none;
+    color: #2f1c6a;
+}
+
+header {
+    @include displayFlex();
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+    padding: 10px 16px;
+
+    .logo {
+        width: 118px;
+        height: 30px;
+        cursor:pointer;
+    }
+
+    i {
+        cursor: pointer;
+        font-size: 1.3rem;
+    }
+}
+
+section{
+    @include displayFlex($justifyContent:center,$flexDirection:column);
+    padding: 10px 16px;
+    text-align: center;
+}
+
+.mobile-hidden {
+    display: none;
+}

@@ -7,15 +7,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="./scss/styles.css">
     <script src="https://kit.fontawesome.com/4f2cda587f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
     <header>
         <div>
-            <img src="./img/Hostinger_logo_black.svg" alt="Hostinger logo">
-            <div><img src="./img/LT-flag.webp" alt=""><span>Lietuvių</span></div>
+            <img class="logo" src="./img/Hostinger_logo_black.svg" alt="Hostinger logo">
+            <div class="mobile-hidden"><img src="./img/LT-flag.webp" alt=""><span>Lietuvių</span></div>
         </div>
-        <nav>
+        <nav class="mobile-hidden">
             <ul>
                 <li><a href="#">WordPress</a></li>
                 <li><a href="#">Svetainių kūrimas</a></li>
@@ -26,131 +32,135 @@
         </nav>
         <div><i class="fa-solid fa-bars"></i></div>
     </header>
-    <section>
-        <div>
-            <h1>DI svetainių kūrimo įrankis – paverskite savo idėją realybe</h1>
-            <p>
-                Intuityvus svetainių kūrimo įrankis jūsų verslo sprendimams. Kurkite be jokių techninių ar dizaino žinių.
-            </p>
-            <div><span>2,69</span><span>€/mėn.</span></div>
-            <p>+ 3 mėn. nemokamai</p>
+    <main>
+        <section>
             <div>
-                <div>00</div>
-                <span>:</span>
-                <div>13</div>
-                <span>:</span>
-                <div>35</div>
-                <span>:</span>
-                <div>26</div>
-            </div>
-            <button>Rinktis planą</button>
-            <div><img src="./img/shield-check.svg" alt="shield with check mark"> 30 dienų pinigų grąžinimo garantija
-            </div>
-        </div>
-        <div>
-            <img src="./img/handmade-ceramics.webp" alt="example webpage for handmade ceramics">
-        </div>
-    </section>
-    <section>
-        <div>
-            <div>
-                <img src="./img/trustpilot.png" alt="">
-                <p>TrustScore <span>4.7 | 18,112</span> reviews</p>
-            </div>
-            <div>
-                <span>Google</span>
-                <img src="./img/google.png" alt="">
-                <p>Rating: <span>4.8/5 | 1,237</span> reviews</p>
-            </div>
-        </div>
-    </section>
-    <section>
-        <h2>Vienas planas jūsų internetinės sėkmės link</h2>
-        <p>Rinkitės patraukliausią pasiūlymą su 30 dienų pinigų grąžinimo garantija.</p>
-        <div>
-            <div>
-                <ul>
-                    <li><b>Nemokamas</b> domenas (įprastai kaina 9,99 €)</li>
-                    <li>
-                        <span><b>Nemokamas</b> el. paštas</span> <img src="./img/help-circle.svg" alt="">
-                    </li>
-                    <li>
-                        <span><b>El. komercijos</b> įrankiai</span> <img src="./img/help-circle.svg" alt="">
-                    </li>
-                    <li>
-                        <span><b>Rinkodaros</b> integracijos</span> <img src="./img/help-circle.svg" alt="">
-                    </li>
-                    <li>
-                        <span>Specialistų pagalba <b>24/7</b></span> <img src="./img/help-circle.svg" alt="">
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3>Svetainių kūrimo įrankis ir hostingas</h3>
-                <div><span>10,79 €</span><span>sutaupote 75%</span></div>
+                <h1>DI svetainių kūrimo įrankis – paverskite savo idėją realybe</h1>
+                <p>
+                    Intuityvus svetainių kūrimo įrankis jūsų verslo sprendimams. Kurkite be jokių techninių ar dizaino
+                    žinių.
+                </p>
                 <div><span>2,69</span><span>€/mėn.</span></div>
-                <p>*užsisakant planą 48 mėn. laikotarpiui; be PVM</p>
-                <p>+3 mėn. nemokamai</p>
-                <button>Pridėti į krepšelį</button>
-                <p>5,99€/mėn.pratęsus planą</p>
+                <p>+ 3 mėn. nemokamai</p>
+                <div>
+                    <div>00</div>
+                    <span>:</span>
+                    <div>13</div>
+                    <span>:</span>
+                    <div>35</div>
+                    <span>:</span>
+                    <div>26</div>
+                </div>
+                <button>Rinktis planą</button>
+                <div><img src="./img/shield-check.svg" alt="shield with check mark"> 30 dienų pinigų grąžinimo garantija
+                </div>
             </div>
             <div>
+                <img src="./img/handmade-ceramics.webp" alt="example webpage for handmade ceramics">
+            </div>
+        </section>
+        <section>
+            <div>
+                <div>
+                    <img src="./img/trustpilot.png" alt="">
+                    <p>TrustScore <span>4.7 | 18,112</span> reviews</p>
+                </div>
+                <div>
+                    <span>Google</span>
+                    <img src="./img/google.png" alt="">
+                    <p>Rating: <span>4.8/5 | 1,237</span> reviews</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Vienas planas jūsų internetinės sėkmės link</h2>
+            <p>Rinkitės patraukliausią pasiūlymą su 30 dienų pinigų grąžinimo garantija.</p>
+            <div>
+                <div>
+                    <ul>
+                        <li><b>Nemokamas</b> domenas (įprastai kaina 9,99 €)</li>
+                        <li>
+                            <span><b>Nemokamas</b> el. paštas</span> <img src="./img/help-circle.svg" alt="">
+                        </li>
+                        <li>
+                            <span><b>El. komercijos</b> įrankiai</span> <img src="./img/help-circle.svg" alt="">
+                        </li>
+                        <li>
+                            <span><b>Rinkodaros</b> integracijos</span> <img src="./img/help-circle.svg" alt="">
+                        </li>
+                        <li>
+                            <span>Specialistų pagalba <b>24/7</b></span> <img src="./img/help-circle.svg" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Svetainių kūrimo įrankis ir hostingas</h3>
+                    <div><span>10,79 €</span><span>sutaupote 75%</span></div>
+                    <div><span>2,69</span><span>€/mėn.</span></div>
+                    <p>*užsisakant planą 48 mėn. laikotarpiui; be PVM</p>
+                    <p>+3 mėn. nemokamai</p>
+                    <button>Pridėti į krepšelį</button>
+                    <p>5,99€/mėn.pratęsus planą</p>
+                </div>
+                <div>
+                    <ul>
+                        <li><b>Dirbtinio intelekto</b> įrankiai<img src="./img/help-circle.svg" alt=""></li>
+                        <li><b>Iki 100</b> svetainių</li>
+                        <li><b>Neribotas</b> duomenų srautas</li>
+                        <li><b>Neriboti</b> ir nemokami SSL</li>
+                        <li>Patikimas <b>hostingas</b></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#">Mokėjimo sąlygos</a>
+        </section>
+        <section>
+            <h2>Vienas svetainių kūrimo įrankis bet kokiam projektui</h2>
+            <p>
+                Siūlome mūsų dizainerių kurtus svetainių šablonus. Funkcionalūs ir naujausiomis dizaino tendencijomis
+                pasižymintys šablonai tiks įvairaus pobūdžio svetainėms. Tiesiog atlikite norimų pakeitimų ir
+                publikuokite
+                svetainę.
+            </p>
+            <div>
                 <ul>
-                    <li><b>Dirbtinio intelekto</b> įrankiai<img src="./img/help-circle.svg" alt=""></li>
-                    <li><b>Iki 100</b> svetainių</li>
-                    <li><b>Neribotas</b> duomenų srautas</li>
-                    <li><b>Neriboti</b> ir nemokami SSL</li>
-                    <li>Patikimas <b>hostingas</b></li>
+                    <li>Verslui</li>
+                    <li>El. parduotuvė</li>
+                    <li>Portfolio</li>
+                    <li>Tinklaraštis</li>
+                    <li>Kita</li>
+                </ul>
+                <select name="" id="">
+                    <option value="business">Verslui</option>
+                    <option value="e-shop">El. parduotuvė</option>
+                    <option value="portfolio">Portfolio</option>
+                    <option value="blog">Tinklaraštis</option>
+                    <option value="other">Kita</option>
+                </select>
+            </div>
+            <div>
+                <img src="./img/presson-template-thumbnail-2x-5540d6.webp" alt="">
+                <img src="./img/blick-template-thumbnail-2x-ef2c97.webp" alt="">
+                <img src="./img/navy-template-thumbnail-2x-bb9ca5.webp" alt="">
+                <img src="./img/dossenbach-template-thumbnail-2x-cfc064.webp" alt="">
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>Dirbtinis intelektas sukurs svetainę už jus</h2>
+                <ul>
+                    <li>Atsakykite į tris klausimus ir gaukite svetainę per 30 s</li>
+                    <li>Paveikslėliai ir turinys pagal jūsų poreikius</li>
+                    <li>Visiškai redaguojamas svetainės dizainas</li>
+                    <li>Efektyvi ir galinga ChatGPT integracija</li>
                 </ul>
             </div>
-        </div>
-        <a href="#">Mokėjimo sąlygos</a>
-    </section>
-    <section>
-        <h2>Vienas svetainių kūrimo įrankis bet kokiam projektui</h2>
-        <p>
-            Siūlome mūsų dizainerių kurtus svetainių šablonus. Funkcionalūs ir naujausiomis dizaino tendencijomis
-            pasižymintys šablonai tiks įvairaus pobūdžio svetainėms. Tiesiog atlikite norimų pakeitimų ir publikuokite
-            svetainę.
-        </p>
-        <div>
-            <ul>
-                <li>Verslui</li>
-                <li>El. parduotuvė</li>
-                <li>Portfolio</li>
-                <li>Tinklaraštis</li>
-                <li>Kita</li>
-            </ul>
-            <select name="" id="">
-                <option value="business">Verslui</option>
-                <option value="e-shop">El. parduotuvė</option>
-                <option value="portfolio">Portfolio</option>
-                <option value="blog">Tinklaraštis</option>
-                <option value="other">Kita</option>
-            </select>
-        </div>
-        <div>
-            <img src="./img/presson-template-thumbnail-2x-5540d6.webp" alt="">
-            <img src="./img/blick-template-thumbnail-2x-ef2c97.webp" alt="">
-            <img src="./img/navy-template-thumbnail-2x-bb9ca5.webp" alt="">
-            <img src="./img/dossenbach-template-thumbnail-2x-cfc064.webp" alt="">
-        </div>
-    </section>
-    <section>
-        <div>
-            <h2>Dirbtinis intelektas sukurs svetainę už jus</h2>
-            <ul>
-                <li>Atsakykite į tris klausimus ir gaukite svetainę per 30 s</li>
-                <li>Paveikslėliai ir turinys pagal jūsų poreikius</li>
-                <li>Visiškai redaguojamas svetainės dizainas</li>
-                <li>Efektyvi ir galinga ChatGPT integracija</li>
-            </ul>
-        </div>
-        <button>Pradėti</button>
-        <div>
-            <img src="./img/easy-start-build-2x-ccb2d6.webp" alt="">
-        </div>
-    </section>
+            <button>Pradėti</button>
+            <div>
+                <img src="./img/easy-start-build-2x-ccb2d6.webp" alt="">
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

@@ -1,1 +1,49 @@
-/*# sourceMappingURL=styles.css.map */
+body {
+  min-width: 340px;
+}
+
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #2f1c6a;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 16px;
+}
+header .logo {
+  width: 118px;
+  height: 30px;
+  cursor: pointer;
+}
+header i {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 16px;
+  text-align: center;
+}
+
+.mobile-hidden {
+  display: none;
+}/*# sourceMappingURL=styles.css.map */
