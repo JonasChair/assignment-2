@@ -36,6 +36,10 @@ img {
   width: 100%;
 }
 
+h1 {
+  font-size: 24px;
+}
+
 p {
   line-height: 24px;
 }
@@ -46,7 +50,7 @@ ul {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   text-align: start;
 }
 ul li {
@@ -101,6 +105,7 @@ main {
   justify-content: center;
   flex-direction: column;
   gap: 30px;
+  padding-top: 20px;
 }
 
 section {
@@ -128,9 +133,6 @@ section {
   justify-content: center;
   flex-direction: column;
   gap: 16px;
-}
-.ai-tool-section .text-container h1 {
-  font-size: 24px;
 }
 .ai-tool-section .text-container p {
   font-weight: 300;
@@ -184,12 +186,18 @@ section {
   align-items: start;
   justify-content: center;
   flex-direction: column;
-  gap: 15;
+  gap: 15px;
   cursor: pointer;
 }
 .review-ratings-section img {
   height: auto;
   max-width: 230px;
+}
+.review-ratings-section .google-logo {
+  width: 74px;
+}
+.review-ratings-section .google-rating {
+  width: 176px;
 }
 .review-ratings-section p {
   font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
@@ -205,27 +213,32 @@ section {
   justify-content: center;
   flex-direction: column;
   gap: 10px;
-  padding: 32px 24px 70px;
+  padding: 32px 24px 82px;
   border: 1px solid #d5dfff;
   border-radius: 4px;
   position: relative;
   width: 100%;
+  color: #673de6;
 }
 .price-plan-section .price-plan-info-wrapper > div {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   width: 100%;
 }
 .price-plan-section .price-plan-info-wrapper .price-plan-info-card1 {
   order: 2;
+  padding-top: 20px;
 }
 .price-plan-section .price-plan-info-wrapper .price-plan-info-card2 {
   order: 1;
   padding-bottom: 32px;
   border-bottom: 1px solid #d5dfff;
+}
+.price-plan-section .price-plan-info-wrapper .price-plan-info-card2 button {
+  min-width: 248px;
 }
 .price-plan-section .price-plan-info-wrapper .price-plan-info-card2 .discount {
   display: flex;
@@ -245,10 +258,15 @@ section {
   text-transform: uppercase;
   font-weight: 700;
 }
+.price-plan-section .price-plan-info-wrapper .price-plan-info-card2 .free-months {
+  color: #5025d1;
+  font-weight: 700;
+}
 .price-plan-section .price-plan-info-wrapper .price-plan-info-card3 {
   order: 3;
 }
 .price-plan-section .price-plan-info-wrapper .price-plan-more-info-btn {
+  color: #673de6;
   flex-direction: row;
   order: 5;
   height: 50px;
@@ -260,7 +278,9 @@ section {
   cursor: pointer;
 }
 .price-plan-section .payment-terms {
+  color: #673de6;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .one-for-all-tool-section select {
@@ -309,4 +329,39 @@ section {
 
 .mobile-hidden {
   display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  h1,
+  h2 {
+    font-size: 28px;
+  }
+  main {
+    gap: 50px;
+    padding-top: 50px;
+  }
+  section {
+    max-width: 688px;
+    width: 100%;
+    padding: 0;
+  }
+  .review-ratings-section {
+    height: 240px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .price-plan-section .price-plan-info-wrapper {
+    flex-direction: row;
+  }
+  .price-plan-section .price-plan-info-wrapper .price-plan-info-card2 {
+    border-bottom: none;
+    border-right: 1px solid #d5dfff;
+    padding-right: 10px;
+  }
+  .price-plan-section .price-plan-info-wrapper .price-plan-info-card1 {
+    padding-left: 10px;
+  }
+  .ai-section img {
+    max-width: 688px;
+  }
 }/*# sourceMappingURL=styles.css.map */
