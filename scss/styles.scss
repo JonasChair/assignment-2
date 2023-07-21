@@ -1,16 +1,21 @@
-@mixin displayFlex($alignItems: center, $justifyContent: center, $flexDirection: column) {
+@mixin displayFlex($alignItems: center, $justifyContent: center, $flexDirection: column, $gap: 10px) {
     display: flex;
     align-items: $alignItems;
     justify-content: $justifyContent;
     flex-direction: $flexDirection;
+    gap: $gap;
 }
 
 $baseColor: #2f1c6a;
 $baseButtonBGColor: #673de6;
 $baseButtonTextColor: white;
+$baseInfoBorderColor: #d5dfff;
+$highlightTextBGColor: #ebe4ff;
+$highlightTextColor: #5025d1;
 
 body {
     min-width: 340px;
+    overflow-x: hidden;
 }
 
 body,
@@ -32,11 +37,53 @@ button {
     font-weight: 700;
     border-radius: 4px;
     text-align: center;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 1px 8px $baseButtonBGColor;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+p {
+    line-height: 24px;
+}
+
+ul {
+    width: 100%;
+    @include displayFlex();
+    text-align: start;
+
+    li {
+        @include displayFlex($flexDirection: row, $justifyContent: space-between);
+        position: relative;
+        padding-left: 20px;
+        width: 100%;
+
+        >img {
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    li:before {
+        content: url("../img/check.svg");
+        height: 16px;
+        width: 16px;
+        position: absolute;
+        top: 2px;
+        left: 0px;
+    }
 }
 
 header {
     @include displayFlex($flexDirection: row, $justifyContent: space-between);
     position: sticky;
+    z-index: 5;
     top: 0;
     background-color: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
@@ -55,22 +102,31 @@ header {
 }
 
 main {
-    @include displayFlex();
+    @include displayFlex($gap: 30px);
 }
 
 section {
-    @include displayFlex();
+    @include displayFlex($gap: 20px);
     padding: 10px 16px;
-    gap: 10px;
-    max-width: 500px;
+    max-width: 550px;
+    text-align: center;
+}
+
+.price {
+    .ammount {
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .currency {
+        font-size: 20px;
+    }
 }
 
 .ai-tool-section {
 
     .text-container {
-        @include displayFlex();
-        text-align: center;
-        gap: 16px;
+        @include displayFlex($gap: 16px);
 
         h1 {
             font-size: 24px;
@@ -81,16 +137,7 @@ section {
             font-size: 16px;
         }
 
-        .price {
-            .ammount {
-                font-size: 36px;
-                font-weight: 700;
-            }
 
-            .currency {
-                font-size: 20px;
-            }
-        }
 
         .extra-deal {
             font-size: 18px;
@@ -98,8 +145,7 @@ section {
         }
 
         .tick-down-timer {
-            @include displayFlex($flexDirection: row);
-            gap: 4px;
+            @include displayFlex($flexDirection: row, $gap: 4px);
 
             div {
                 @include displayFlex();
@@ -112,11 +158,11 @@ section {
         }
 
         .money-back-guarantee {
-            @include displayFlex($flexDirection: row);
-            gap: 5px;
+            @include displayFlex($flexDirection: row, $gap: 5px);
 
             img {
                 height: 18px;
+                width: 18px;
             }
         }
     }
@@ -133,10 +179,9 @@ section {
 
     height: 380px;
     justify-content: space-evenly;
-    
-    div{
-        @include displayFlex($alignItems: start);
-        gap:15px;
+
+    div {
+        @include displayFlex($alignItems: start, $gap: 15);
         cursor: pointer;
     }
 
@@ -146,7 +191,7 @@ section {
     }
 
     p {
-        font-family: "Helvetica Neue","Helvetica","Arial","sans-serif";
+        font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
         font-size: 14px;
     }
 
@@ -155,6 +200,91 @@ section {
     }
 }
 
+.price-plan-section {
+
+    .price-plan-info-wrapper {
+        @include displayFlex($gap: 10px);
+        padding: 32px 24px 70px;
+        border: 1px solid $baseInfoBorderColor;
+        border-radius: 4px;
+        position: relative;
+        width: 100%;
+
+        >div {
+            @include displayFlex();
+            width: 100%;
+        }
+
+        .price-plan-info-card1 {
+            order: 2;
+        }
+
+        .price-plan-info-card2 {
+            order: 1;
+            padding-bottom: 32px;
+            border-bottom: 1px solid $baseInfoBorderColor;
+
+            .discount {
+                @include displayFlex($flexDirection: row);
+
+                .old-price {
+                    text-decoration: line-through;
+                }
+
+                .discount-ammount {
+                    padding: 5px 10px;
+                    background-color: $highlightTextBGColor;
+                    color: $highlightTextColor;
+                    border-radius: 20px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .price-plan-info-card3 {
+            order: 3;
+        }
+
+        .price-plan-more-info-btn {
+            flex-direction: row;
+            order: 5;
+            height: 50px;
+            border-top: 1px solid $baseInfoBorderColor;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+
+    .payment-terms {
+        cursor: pointer;
+    }
+}
+
+.one-for-all-tool-section {
+    select {
+        width: 100%;
+        padding: 13px 16px;
+        font-size: 20px;
+        border-radius: 4px;
+        border: 1px solid #dadce0;
+    }
+
+    select:hover {
+        border: 1px solid $highlightTextColor;
+        box-shadow: 0 0 4px $baseButtonBGColor;
+    }
+
+    .template-images-wrapper {
+        @include displayFlex($gap: 25px);
+        max-width: 350px;
+    }
+
+}
+
 .mobile-hidden {
-    display: none;
+    display: none !important;
 }
