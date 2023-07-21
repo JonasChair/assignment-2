@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="24" height="24" viewBox="0 0 17.123 21.104" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check" xmlns="http://www.w3.org/2000/svg">
+  <polyline points="14.571 7.364 7.093 14.049 3.694 11.011" style="stroke-width: 1px; stroke: rgb(103, 61, 230); transform-box: fill-box; transform-origin: 50% 50%;"/>
+  <path d="M 8.547 20.524 C 8.547 20.524 16.547 16.524 16.547 10.524 L 16.547 3.524 L 8.547 0.524 L 0.547 3.524 L 0.547 10.524 C 0.547 16.524 8.547 20.524 8.547 20.524 Z" style="stroke-width: 1px; stroke: rgb(103, 61, 230); transform-box: fill-box; transform-origin: 50% 50%;"/>
+</svg>

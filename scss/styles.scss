@@ -1,9 +1,13 @@
-@mixin displayFlex($alignItems: center, $justifyContent: space-between, $flexDirection: row) {
+@mixin displayFlex($alignItems: center, $justifyContent: center, $flexDirection: column) {
     display: flex;
     align-items: $alignItems;
     justify-content: $justifyContent;
     flex-direction: $flexDirection;
 }
+
+$baseColor: #2f1c6a;
+$baseButtonBGColor: #673de6;
+$baseButtonTextColor: white;
 
 body {
     min-width: 340px;
@@ -16,11 +20,22 @@ body,
     box-sizing: border-box;
     font-family: 'DM Sans', sans-serif;
     user-select: none;
-    color: #2f1c6a;
+    color: $baseColor;
+}
+
+button {
+    all: unset;
+    color: $baseButtonTextColor;
+    background-color: $baseButtonBGColor;
+    min-height: 48px;
+    min-width: 290px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-align: center;
 }
 
 header {
-    @include displayFlex();
+    @include displayFlex($flexDirection: row, $justifyContent: space-between);
     position: sticky;
     top: 0;
     background-color: white;
@@ -30,7 +45,7 @@ header {
     .logo {
         width: 118px;
         height: 30px;
-        cursor:pointer;
+        cursor: pointer;
     }
 
     i {
@@ -39,10 +54,105 @@ header {
     }
 }
 
-section{
-    @include displayFlex($justifyContent:center,$flexDirection:column);
+main {
+    @include displayFlex();
+}
+
+section {
+    @include displayFlex();
     padding: 10px 16px;
-    text-align: center;
+    gap: 10px;
+    max-width: 500px;
+}
+
+.ai-tool-section {
+
+    .text-container {
+        @include displayFlex();
+        text-align: center;
+        gap: 16px;
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 16px;
+        }
+
+        .price {
+            .ammount {
+                font-size: 36px;
+                font-weight: 700;
+            }
+
+            .currency {
+                font-size: 20px;
+            }
+        }
+
+        .extra-deal {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .tick-down-timer {
+            @include displayFlex($flexDirection: row);
+            gap: 4px;
+
+            div {
+                @include displayFlex();
+                font-size: 24px;
+                height: 64px;
+                width: 64px;
+                border: 1px solid $baseColor;
+                border-radius: 6px;
+            }
+        }
+
+        .money-back-guarantee {
+            @include displayFlex($flexDirection: row);
+            gap: 5px;
+
+            img {
+                height: 18px;
+            }
+        }
+    }
+
+    .ai-tool-img-container {
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+}
+
+.review-ratings-section {
+
+    height: 380px;
+    justify-content: space-evenly;
+    
+    div{
+        @include displayFlex($alignItems: start);
+        gap:15px;
+        cursor: pointer;
+    }
+
+    img {
+        height: auto;
+        max-width: 230px;
+    }
+
+    p {
+        font-family: "Helvetica Neue","Helvetica","Arial","sans-serif";
+        font-size: 14px;
+    }
+
+    span {
+        font-weight: 900;
+    }
 }
 
 .mobile-hidden {

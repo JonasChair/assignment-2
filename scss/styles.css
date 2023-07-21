@@ -14,6 +14,17 @@ body,
   color: #2f1c6a;
 }
 
+button {
+  all: unset;
+  color: white;
+  background-color: #673de6;
+  min-height: 48px;
+  min-width: 290px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-align: center;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -35,13 +46,104 @@ header i {
   font-size: 1.3rem;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 section {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 10px 16px;
+  gap: 10px;
+  max-width: 500px;
+}
+
+.ai-tool-section .text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
+  gap: 16px;
+}
+.ai-tool-section .text-container h1 {
+  font-size: 24px;
+}
+.ai-tool-section .text-container p {
+  font-weight: 300;
+  font-size: 16px;
+}
+.ai-tool-section .text-container .price .ammount {
+  font-size: 36px;
+  font-weight: 700;
+}
+.ai-tool-section .text-container .price .currency {
+  font-size: 20px;
+}
+.ai-tool-section .text-container .extra-deal {
+  font-size: 18px;
+  font-weight: 700;
+}
+.ai-tool-section .text-container .tick-down-timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4px;
+}
+.ai-tool-section .text-container .tick-down-timer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 24px;
+  height: 64px;
+  width: 64px;
+  border: 1px solid #2f1c6a;
+  border-radius: 6px;
+}
+.ai-tool-section .text-container .money-back-guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+}
+.ai-tool-section .text-container .money-back-guarantee img {
+  height: 18px;
+}
+.ai-tool-section .ai-tool-img-container img {
+  height: auto;
+  width: 100%;
+}
+
+.review-ratings-section {
+  height: 380px;
+  justify-content: space-evenly;
+}
+.review-ratings-section div {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  cursor: pointer;
+}
+.review-ratings-section img {
+  height: auto;
+  max-width: 230px;
+}
+.review-ratings-section p {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  font-size: 14px;
+}
+.review-ratings-section span {
+  font-weight: 900;
 }
 
 .mobile-hidden {
