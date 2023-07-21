@@ -19,18 +19,18 @@
     <header>
         <div>
             <img class="logo" src="./img/Hostinger_logo_black.svg" alt="Hostinger logo">
-            <div class="mobile-hidden"><img src="./img/LT-flag.webp" alt=""><span>Lietuvių</span></div>
+            <div class="mobile-hidden language-select"><img src="./img/LT-flag.webp" alt=""><span>Lietuvių</span></div>
         </div>
         <nav class="mobile-hidden">
             <ul>
                 <li><a href="#">WordPress</a></li>
                 <li><a href="#">Svetainių kūrimas</a></li>
-                <li><a href="#">Hostingas</a></li>
+                <li><a href="#">Hostingas <i class="fa-solid fa-chevron-down"></i></a></li>
                 <li><a href="#">Domenai</a></li>
             </ul>
             <button>Prisijungti</button>
         </nav>
-        <div><i class="fa-solid fa-bars"></i></div>
+        <div class="desktop-hidden "><i class="fa-solid fa-bars"></i></div>
     </header>
     <main>
         <section class="ai-tool-section">
@@ -76,7 +76,7 @@
             <p>Rinkitės patraukliausią pasiūlymą su 30 dienų pinigų grąžinimo garantija.</p>
             <div class="price-plan-info-wrapper">
                 <div class="price-plan-info-card1">
-                    <ul>
+                    <ul class="checkmark">
                         <li>
                             <span><b>Nemokamas</b> domenas (įprastai kaina 9,99 €)</span>
                         </li>
@@ -105,7 +105,7 @@
                     <p>5,99€/mėn.pratęsus planą</p>
                 </div>
                 <div class="price-plan-info-card3 mobile-hidden">
-                    <ul>
+                    <ul class="checkmark">
                         <li><span><b>Dirbtinio intelekto</b> įrankiai</span><img src="./img/help-circle.svg" alt="">
                         </li>
                         <li><span><b>Iki 100</b> svetainių</span></li>
@@ -114,7 +114,8 @@
                         <li><span>Patikimas <b>hostingas</b></span></li>
                     </ul>
                 </div>
-                <div class="price-plan-more-info-btn"> Sužinoti daugiau <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="price-plan-more-info-btn desktop-hidden"> Sužinoti daugiau <i
+                        class="fa-solid fa-chevron-down"></i></div>
             </div>
             <span class="payment-terms">Mokėjimo sąlygos</span>
         </section>
@@ -126,7 +127,7 @@
                 publikuokite
                 svetainę.
             </p>
-            <div class="mobile-hidden">
+            <div class="mobile-hidden templates-list-selector">
                 <ul>
                     <li>Verslui</li>
                     <li>El. parduotuvė</li>
@@ -150,16 +151,20 @@
             </div>
         </section>
         <section class="ai-section">
-            <h2>Dirbtinis intelektas sukurs svetainę už jus</h2>
-            <ul>
-                <li>Atsakykite į tris klausimus ir gaukite svetainę per 30 s</li>
-                <li>Paveikslėliai ir turinys pagal jūsų poreikius</li>
-                <li>Visiškai redaguojamas svetainės dizainas</li>
-                <li>Efektyvi ir galinga ChatGPT integracija</li>
-            </ul>
-            <button>Pradėti</button>
             <div>
-                <img src="./img/easy-start-build-2x-ccb2d6.webp" alt="">
+                <div class="ai-section-info">
+                    <h2>Dirbtinis intelektas sukurs svetainę už jus</h2>
+                    <ul class="checkmark">
+                        <li>Atsakykite į tris klausimus ir gaukite svetainę per 30 s</li>
+                        <li>Paveikslėliai ir turinys pagal jūsų poreikius</li>
+                        <li>Visiškai redaguojamas svetainės dizainas</li>
+                        <li>Efektyvi ir galinga ChatGPT integracija</li>
+                    </ul>
+                    <button>Pradėti</button>
+                </div>
+                <div>
+                    <img src="./img/easy-start-build-2x-ccb2d6.webp" alt="">
+                </div>
             </div>
         </section>
     </main>
