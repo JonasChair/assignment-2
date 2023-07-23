@@ -459,12 +459,13 @@ section {
   }
   .ai-tool-section {
     flex-direction: row;
+    max-width: 1472px;
     justify-content: space-between;
-    max-width: none;
     overflow-x: hidden;
   }
   .ai-tool-section .text-container {
     min-width: 375px;
+    max-width: 470px;
     text-align: left;
     align-items: start;
   }
@@ -505,15 +506,16 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 5px;
+    gap: 0;
     list-style: none;
     border-bottom: 1px solid #d5dfff;
   }
   .one-for-all-tool-section .templates-list-selector ul li {
+    color: #727586;
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
-    padding: 20px;
+    padding: 20px 30px;
     transform: translateY(1px);
     border-bottom: 1px solid rgba(0, 0, 0, 0);
   }
@@ -547,5 +549,10 @@ section {
   }
   .ai-section > div .ai-section-info ul {
     align-items: start;
+  }
+}
+@media screen and (min-width: 1600px) {
+  section {
+    padding: 0;
   }
 }/*# sourceMappingURL=styles.css.map */

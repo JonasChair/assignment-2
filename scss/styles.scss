@@ -468,12 +468,13 @@ section {
 
     .ai-tool-section {
         flex-direction: row;
+        max-width: 1472px;
         justify-content: space-between;
-        max-width: none;
         overflow-x: hidden;
 
         .text-container {
             min-width: 375px;
+            max-width: 470px;
             text-align: left;
             align-items: start;
         }
@@ -523,15 +524,16 @@ section {
             box-sizing: content-box;
 
             ul {
-                @include displayFlex($flexDirection: row, $gap: 5px);
+                @include displayFlex($flexDirection: row, $gap: 0);
                 list-style: none;
                 border-bottom: 1px solid $baseInfoBorderColor;
 
                 li {
+                    color: #727586;
                     font-weight: 700;
                     font-size: 14px;
                     cursor: pointer;
-                    padding: 20px;
+                    padding: 20px 30px;
                     transform: translateY(1px);
                     border-bottom: 1px solid rgba(0, 0, 0, 0);
                 }
@@ -577,5 +579,11 @@ section {
                 }
             }
         }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    section{
+        padding:0;
     }
 }
